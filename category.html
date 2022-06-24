@@ -41,6 +41,8 @@
                 padding: 20px;
                 margin-bottom: 20px;
                 background: #FFF;
+                -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3); 
+                box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
             }
             .overlay>a:last-child{
                 margin-bottom: 0;
@@ -61,7 +63,7 @@
                 padding-left: 40%;
             }
             .home>header>h1{
-                font-size: 6em;
+                font-size: 4em;
                 margin: 0;
             }
             .home>header>p{
@@ -72,8 +74,7 @@
                 height: calc(100vh - 100px - 25vh);
                 max-height: calc(100vh - 100px - 25vh);
                 border-radius: 30px;
-                border: solid 2px #FFF;
-                background: #888;
+                background: #333;
                 padding: 0;
                 margin: 0;
                 overflow-x: hidden;
@@ -137,7 +138,8 @@
                 margin: 0 30px 30px 0;
                 border-radius: 30px;
                 background: #FFF;
-                width: calc(45% - 15px);
+                min-width: 25vw;
+                width: calc(100% / 2 - 100px);
             }
             .content>section:last-child{
                 margin: 0 30px 50px 0;
@@ -170,6 +172,34 @@
             }
             /* Mobile version */
             @media screen and (max-width: 980px) {
+                .home{
+                    position: relative;
+                    z-index: -1;
+                    padding: 50px;
+                    height: calc(100vh - 100px);
+                    width: calc(100vw - 100px);
+                }
+                .home>section>a{
+                    padding: 30px;
+                    width: calc(100vw - 170px);
+                    display: block;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    text-decoration: none;
+                }
+                .content{
+                    padding: 50px;
+                    margin-left: 0;
+                    width: calc(100vw - 150px);
+                }
+                .content>section{
+                    display: block;
+                    margin: 0 0 30px 0;
+                    width: 100%;
+                }
+                .content>section:last-child{
+                    margin: 0 30px 50px 0;
+                }
             }
         </style>
     </head>
@@ -179,15 +209,15 @@
             <a href="information.html">i</a>
         </div>
         <div class="home">
-            <header><h1>2Huchan</h1><p>A touhou image board.</p></header>
+            <header><h1 lang="ja-jp">東方chan</h1><p>A touhou image board.</p></header>
             <section>
-                <a href=""><span class="category_tag">/a/</span>art</a>
-                <a href=""><span class="category_tag">/c/</span>cute art</a>
-                <a href=""><span class="category_tag">/l/</span>lore</a>
-                <a href=""><span class="category_tag">/v/</span>video games</a>
-                <a href=""><span class="category_tag">/m/</span>memes</a>
-                <a href=""><span class="category_tag">/h/</span><span class="age_tag"></span>hentai</a>
-                <a href="" class="current"><span class="category_tag">/y/</span><span class="age_tag"></span>yuri</a>
+                <a href="a.html"><span class="category_tag">/a/</span>art</a>
+                <a href="c.html"><span class="category_tag">/c/</span>cute art</a>
+                <a href="l.html"><span class="category_tag">/l/</span>lore</a>
+                <a href="v.html"><span class="category_tag">/v/</span>video games</a>
+                <a href="m.html"><span class="category_tag">/m/</span>memes</a>
+                <a href="h.html"><span class="category_tag">/h/</span><span class="age_tag"></span>hentai</a>
+                <a href="y.html" class="current"><span class="category_tag">/y/</span><span class="age_tag"></span>yuri</a>
             </section>
         </div>
         <div class="content">

@@ -30,6 +30,7 @@
                 color: white;
                 overflow-x: hidden;
             }
+            /* Home */
             .home{
                 margin-left: 25vw;
                 padding: 50px;
@@ -39,7 +40,7 @@
                 height: 25vh;
             }
             .home>header>h1{
-                font-size: 6em;
+                font-size: 5em;
                 margin: 0;
             }
             .home>header>p{
@@ -48,7 +49,7 @@
             }
             .home>section{
                 height: calc(100vh - 100px - 25vh);
-                max-height: calc(100vh - 100px - 25vh);
+                max-height: calc(100vh - 100px - 25vh - 50px);
                 border-radius: 30px;
                 background: #333;
                 padding: 0;
@@ -93,6 +94,18 @@
             .home>section>a:hover>.age_tag{
                 background: #ff3333;
             }
+            /* Footer */
+            footer{
+                height: 50px;
+                color: #888;
+                text-align: center;
+                text-align: -moz-center;
+            }
+            footer>p>a{
+                color: #FFF;
+                text-decoration: none;
+            }
+            /* Mobile version */
             @media screen and (max-width: 980px) {
                 body{
                     background-image: none;
@@ -121,19 +134,19 @@
     </head>
     <body>
         <div class="home">
-		<header><h1 lang="ja-jp" style="font-size:5em;">東方chan</h1><p>A touhou image board.</p></header>
+		<header><h1 lang="ja-jp">東方chan</h1><p>A touhou image board.</p></header>
             <section>
-                <a href=""><span class="category_tag">/a/</span>art</a>
-                <a href=""><span class="category_tag">/c/</span>cute art</a>
-                <a href=""><span class="category_tag">/l/</span>lore</a>
-                <a href=""><span class="category_tag">/v/</span>video games</a>
-                <a href=""><span class="category_tag">/m/</span>memes</a>
-                <a href=""><span class="category_tag">/h/</span><span class="age_tag"></span>hentai</a>
-                <a href=""><span class="category_tag">/y/</span><span class="age_tag"></span>yuri</a>
+                <a href="boards/a.html"><span class="category_tag">/a/</span>art</a>
+                <a href="boards/c.html"><span class="category_tag">/c/</span>cute art</a>
+                <a href="boards/l.html"><span class="category_tag">/l/</span>lore</a>
+                <a href="boards/v.html"><span class="category_tag">/v/</span>video games</a>
+                <a href="boards/m.html"><span class="category_tag">/m/</span>memes</a>
+                <a href="boards/h.html"><span class="category_tag">/h/</span><span class="age_tag"></span>hentai</a>
+                <a href="boards/y.html"><span class="category_tag">/y/</span><span class="age_tag"></span>yuri</a>
             </section>
+            <footer>
+                <p>Site hosted by <a href="https://github.com/koimoku">Nazrin</a> and web design by <a href="https://github.com/LOgreee">L'Ogre</a><br></p>
+            </footer>
         </div>
     </body>
-    <footer>
-	    <p align="center" style="color: #888888;">Site hosted by <a style="color: #FFF; text-decoration: none;" href="https://github.com/koimoku">Nazrin</a> and web design by <a style="color: #FFF; text-decoration: none;" href="https://github.com/LOgreee">L'Ogre</a><br></p>
-</footer>
 </html>
