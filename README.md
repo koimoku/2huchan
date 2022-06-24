@@ -3,12 +3,15 @@ a simple touhou imageboard created in html and css, meant to run on tor
 
 # Prerequisites:
 a unix-based operating system
+
 git
+
 python, php cli, or another webserver
 
 # Building:
 1. Clone the repository
 `$ git clone https://github.com/koimoku/2huchan.git`
+
 `$ cd 2huchan`
 
 2. Start the webserver
@@ -27,6 +30,9 @@ none of the backend stuff is working rn, and i intend to add that later
 
 # Planned features:
 more pages for each specific board
+
 a captia system to prevent botting
+
 full capability of posting and post moderation
+
 open traffic to my hidden service
