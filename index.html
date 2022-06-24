@@ -1,0 +1,139 @@
+<html>
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>2huchan</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+        <style>
+            ::-webkit-scrollbar {
+                border-radius: 30px;
+                width: 7px;
+            }
+            ::-webkit-scrollbar-thumb {
+                background:#717171;
+                border-radius: 30px;
+            }
+            ::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0);
+                margin: 30px;
+            }
+            body{
+                font-family: 'Roboto', serif;
+                min-height: 100vh;
+                padding: 0;
+                margin: 0;
+                background: #222;
+                background-image: url(images/2.png);
+                background-repeat: no-repeat;
+                background-position: left bottom;
+                background-size: 25vw;
+                color: white;
+                overflow-x: hidden;
+            }
+            .home{
+                margin-left: 25vw;
+                padding: 50px;
+                height: calc(100vh - 100px);
+            }
+            .home>header{
+                height: 25vh;
+            }
+            .home>header>h1{
+                font-size: 6em;
+                margin: 0;
+            }
+            .home>header>p{
+                font-size: 1.5em;
+                margin: 0;
+            }
+            .home>section{
+                height: calc(100vh - 100px - 25vh);
+                max-height: calc(100vh - 100px - 25vh);
+                border-radius: 30px;
+                background: #333;
+                padding: 0;
+                margin: 0;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+            .home>section>a{
+                color: #FFF;
+                padding: 30px;
+                width: calc(75vw - 100px - 70px);
+                display: block;
+                border-radius: 30px;
+                overflow: hidden;
+                text-decoration: none;
+            }
+            .home>section>a:hover{
+                color: #717171;
+                background: #FFF;
+            }
+            .category_tag{
+                text-align: center;
+                min-width: 3em;
+                margin-right: 15px;
+                padding: 15px;
+                color: #FFF;
+                background: #717171;
+                border-radius: 30px;
+            }
+            .age_tag::before{
+                content: "+18";
+            }
+            .age_tag{
+                text-align: center;
+                min-width: 3em;
+                margin-right: 15px;
+                padding: 15px;
+                color: #FFF;
+                background: #717171;
+                border-radius: 30px;
+            }
+            .home>section>a:hover>.age_tag{
+                background: #ff3333;
+            }
+            @media screen and (max-width: 980px) {
+                body{
+                    background-image: none;
+                }
+                .home{
+                    margin-left: 0;
+                }
+                .home>header{
+                    background-image: url(images/2.png);
+                    background-repeat: no-repeat;
+                    background-position: left+30px bottom;
+                    background-size: contain;
+                    padding-left: 50%;
+                }
+                .home>header>h1{
+                    font-size: 3em;
+                }
+                .home>header>p{
+                    font-size: 1em;
+                }
+                .home>section>a{
+                    width: calc(100vw - 100px - 70px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home">
+		<header><h1 lang="ja-jp" style="font-size:5em;">東方chan</h1><p>A touhou image board.</p></header>
+            <section>
+                <a href=""><span class="category_tag">/a/</span>art</a>
+                <a href=""><span class="category_tag">/c/</span>cute art</a>
+                <a href=""><span class="category_tag">/l/</span>lore</a>
+                <a href=""><span class="category_tag">/v/</span>video games</a>
+                <a href=""><span class="category_tag">/m/</span>memes</a>
+                <a href=""><span class="category_tag">/h/</span><span class="age_tag"></span>hentai</a>
+                <a href=""><span class="category_tag">/y/</span><span class="age_tag"></span>yuri</a>
+            </section>
+        </div>
+    </body>
+    <footer>
+	    <p align="center" style="color: #888888;">Site hosted by <a style="color: #FFF; text-decoration: none;" href="https://github.com/koimoku">Nazrin</a> and web design by <a style="color: #FFF; text-decoration: none;" href="https://github.com/LOgreee">L'Ogre</a><br></p>
+</footer>
+</html>

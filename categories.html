@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <title>2huchan</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+        <style>
+            ::-webkit-scrollbar {
+                border-radius: 30px;
+                width: 7px;
+            }
+            ::-webkit-scrollbar-thumb {
+                background:#717171;
+                border-radius: 30px;
+            }
+            ::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0);
+                margin: 30px;
+            }
+            body{
+                font-family: 'Roboto', serif;
+                min-height: 100vh;
+                padding: 0;
+                margin: 0;
+                background: #222;
+                color: white;
+                overflow-x: hidden;
+            }
+            /* Overlay*/
+            .overlay{
+                position: fixed;
+                bottom: 20;
+                right: 20;
+            }
+            .overlay>a{
+                text-align: center;
+                text-decoration: none;
+                color: #717171;
+                display: block;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                padding: 20px;
+                margin-bottom: 20px;
+                background: #FFF;
+            }
+            .overlay>a:last-child{
+                margin-bottom: 0;
+            }
+            /* Home */
+            .home{
+                position: fixed;
+                padding: 50px;
+                height: calc(100vh - 100px);
+                width: 25vw;
+            }
+            .home>header{
+                height: 25vh;
+                background-image: url(images/1.png);
+                background-repeat: no-repeat;
+                background-position: left+30px bottom;
+                background-size: contain;
+                padding-left: 40%;
+            }
+            .home>header>h1{
+                font-size: 6em;
+                margin: 0;
+            }
+            .home>header>p{
+                font-size: 1.5em;
+                margin: 0;
+            }
+            .home>section{
+                height: calc(100vh - 100px - 25vh);
+                max-height: calc(100vh - 100px - 25vh);
+                border-radius: 30px;
+                border: solid 2px #FFF;
+                background: #888;
+                padding: 0;
+                margin: 0;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+            .home>section>a{
+                color: #FFF;
+                padding: 30px;
+                width: calc(25vw - 70px);
+                display: block;
+                border-radius: 30px;
+                overflow: hidden;
+                text-decoration: none;
+            }
+            .home>section>a.current{
+                color: #717171;
+                background: #FFF;
+            }
+            .home>section>a:hover{
+                color: #717171;
+                background: #FFF;
+            }
+            .category_tag{
+                text-align: center;
+                min-width: 3em;
+                margin-right: 15px;
+                padding: 15px;
+                color: #FFF;
+                background: #717171;
+                border-radius: 30px;
+            }
+            .age_tag::before{
+                content: "+18";
+            }
+            .age_tag{
+                text-align: center;
+                min-width: 3em;
+                margin-right: 15px;
+                padding: 15px;
+                color: #FFF;
+                background: #717171;
+                border-radius: 30px;
+            }
+            .home>section>a:hover>.age_tag{
+                background: #ff3333;
+            }
+            .home>section>a.current>.age_tag{
+                background: #ff3333;
+            }
+            /* Content */
+            .content{
+                padding: 50px 50px 0 50px;
+                margin-left: calc(25vw + 50px);
+                width: calc(75vw - 150px);
+            }
+            .content>section{
+                display: inline-block;
+                color: #717171;
+                text-decoration: none;
+                padding: 30px;
+                margin: 0 30px 30px 0;
+                border-radius: 30px;
+                background: #FFF;
+                width: calc(45% - 15px);
+            }
+            .content>section:last-child{
+                margin: 0 30px 50px 0;
+            }
+            .content>section>img{
+                display: block;
+                text-align: center;
+                margin: auto;
+                margin-bottom: 30px;
+                border-radius: 30px;
+                background: #888;
+                max-width: 100%;
+                height: 100%;
+                max-height: 60vh;
+            }
+            .content>section>a{
+                word-break: break-word;
+                color: #717171;
+                text-decoration: none;
+                font-size: 1.5em;
+            }
+            .content>section>a>.author::before{
+                content: "by "
+            }
+            .content>section>a>.author{
+                display: block;
+                color: #717171;
+                text-decoration: none;
+                font-size: 0.5em;
+            }
+            /* Mobile version */
+            @media screen and (max-width: 980px) {
+            }
+        </style>
+    </head>
+    <body>
+        <div class="overlay">
+            <a href="post.html">P</a>
+            <a href="information.html">i</a>
+        </div>
+        <div class="home">
+            <header><h1>2Huchan</h1><p>A touhou image board.</p></header>
+            <section>
+                <a href=""><span class="category_tag">/a/</span>art</a>
+                <a href=""><span class="category_tag">/c/</span>cute art</a>
+                <a href=""><span class="category_tag">/l/</span>lore</a>
+                <a href=""><span class="category_tag">/v/</span>video games</a>
+                <a href=""><span class="category_tag">/m/</span>memes</a>
+                <a href=""><span class="category_tag">/h/</span><span class="age_tag"></span>hentai</a>
+                <a href="" class="current"><span class="category_tag">/y/</span><span class="age_tag"></span>yuri</a>
+            </section>
+        </div>
+        <div class="content">
+            <section><img src="images/1.png"><a href="">SQUALALANOUSOMMES PARTIS AEJNAEIJHQNDQZIEHQEMPIJFQPZQPZRIJQZEMIJ <span class="author">LOGGERS</span></a></section>
+            <section><img src="images/2.png"><a href="">Hentai <span class="author">LOGGERS</span></a></section>
+            <section><img src="images/1.png"><a href="">CUTE character <span class="author">LOGGERS</span></a></section>
+        </div>
+    </body>
+</html>
