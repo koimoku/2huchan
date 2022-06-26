@@ -1,0 +1,263 @@
+<html>
+    <head>
+        <title>2huchan - art</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+        <style>
+            /* Variable */
+            :root{
+                /* Background */
+                --background:#222222;
+                --second-background:#FFFFFF;
+                --third-background:#888888;
+                --home-background:#333333;
+                /* Text */
+                --primary-text-color:#FFFFFF;
+                --second-text-color:#717171;
+                /* Tag */
+                --tag-color:#717171;
+                --age-tag-color:#ff3333;
+            }
+            /* Browser elements*/
+            ::-webkit-scrollbar {
+                border-radius: 30px;
+                width: 7px;
+            }
+            ::-webkit-scrollbar-thumb {
+                background:#717171;
+                border-radius: 30px;
+            }
+            ::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0);
+                margin: 30px;
+            }
+            /* Base elements */
+            body{
+                font-family: 'Roboto', serif;
+                min-height: 100vh;
+                padding: 0;
+                margin: 0;
+                background: var(--background);
+                color: var(--primary-text-color);
+                overflow-x: hidden;
+            }
+            /* Overlay*/
+            .overlay{
+                position: fixed;
+                bottom: 20;
+                right: 20;
+                z-index: 100;
+            }
+            .overlay>a{
+                text-align: center;
+                text-decoration: none;
+                color: var(--second-text-color);
+                display: block;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                padding: 20px;
+                margin-bottom: 20px;
+                background: var(--second-background);
+                background-size: 100%;
+                background-position: center;
+                -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3); 
+                box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
+            }
+            .overlay>a:last-child{
+                margin-bottom: 0;
+            }
+            .overlay>a.post{
+                background-image: url(../assets/plus_logo.svg);
+            }
+            .overlay>a.info{
+                background-image: url(../assets/info_logo.svg);
+            }
+            /* Home */
+            .home{
+                position: fixed;
+                padding: 50px;
+                height: calc(100vh - 100px);
+                width: 25vw;
+            }
+            .home>header{
+                height: 25vh;
+                background-image: url(../assets/logo.png);
+                background-repeat: no-repeat;
+                background-position: left+30px bottom;
+                background-size: contain;
+                padding-left: 40%;
+            }
+            .home>header>h1{
+                font-size: 4em;
+                margin: 0;
+            }
+            .home>header>p{
+                font-size: 1.5em;
+                margin: 0;
+            }
+            .home>section{
+                height: calc(100vh - 100px - 25vh);
+                max-height: calc(100vh - 100px - 25vh);
+                border-radius: 30px;
+                background: var(--home-background);
+                padding: 0;
+                margin: 0;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+            .home>section>a{
+                color: var(--primary-text-color);
+                padding: 30px;
+                width: calc(25vw - 70px);
+                display: block;
+                border-radius: 30px;
+                overflow: hidden;
+                text-decoration: none;
+            }
+            .home>section>a.current{
+                color: var(--second-text-color);
+                background: var(--second-background);
+            }
+            .home>section>a:hover{
+                color: var(--second-text-color);
+                background: var(--second-background);
+            }
+            .category_tag{
+                text-align: center;
+                min-width: 3em;
+                margin-right: 15px;
+                padding: 15px;
+                color: var(--primary-text-color);
+                background: var(--tag-color);
+                border-radius: 30px;
+            }
+            .age_tag::before{
+                content: "+18";
+            }
+            .age_tag{
+                text-align: center;
+                min-width: 3em;
+                margin-right: 15px;
+                padding: 15px;
+                color: var(--primary-text-color);
+                background: var(--tag-color);
+                border-radius: 30px;
+            }
+            .home>section>a:hover>.age_tag{
+                background: var(--age-tag-color);
+            }
+            .home>section>a.current>.age_tag{
+                background: var(--age-tag-color);
+            }
+            /* Content */
+            .content{
+                padding: 50px 50px 0 50px;
+                margin-left: calc(25vw + 50px);
+                width: calc(75vw - 150px);
+            }
+            .content>section{
+                display: inline-block;
+                color: var(--second-text-color);
+                text-decoration: none;
+                padding: 30px;
+                margin: 0 30px 30px 0;
+                border-radius: 30px;
+                background: var(--second-background);
+                min-width: 25vw;
+                width: calc(100% / 2 - 100px);
+            }
+            .content>section:last-child{
+                margin: 0 30px 50px 0;
+            }
+            .content>section>img{
+                display: block;
+                text-align: center;
+                margin: auto;
+                margin-bottom: 30px;
+                border-radius: 30px;
+                background: var(--third-background);
+                max-width: 100%;
+                height: 100%;
+                max-height: 60vh;
+            }
+            .content>section>a{
+                word-break: break-word;
+                color: var(--second-text-color);
+                text-decoration: none;
+                font-size: 1.5em;
+            }
+            .content>section>a>.author::before{
+                content: "by "
+            }
+            .content>section>a>.author{
+                display: block;
+                color: var(--second-text-color);
+                text-decoration: none;
+                font-size: 0.5em;
+            }
+            /* Small screen version */
+            @media screen and (max-width: 1600px) {
+                .content{
+                    width: calc(75vw - 200px);
+                }
+                .content>section{
+                    display: block;
+                    margin: 0 0 30px 0;
+                    width: 100%;
+                }
+            }
+            /* Mobile version */
+            @media screen and (max-width: 980px) {
+                .home{
+                    position: relative;
+                    padding: 50px;
+                    height: calc(100vh - 100px);
+                    width: calc(100vw - 100px);
+                }
+                .home>section>a{
+                    padding: 30px;
+                    width: calc(100vw - 170px);
+                    display: block;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    text-decoration: none;
+                }
+                .content{
+                    padding: 50px;
+                    margin-left: 0;
+                    width: calc(100vw - 150px);
+                }
+                .content>section{
+                    display: block;
+                    margin: 0 0 30px 0;
+                    width: 100%;
+                }
+                .content>section:last-child{
+                    margin: 0 30px 50px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="overlay">
+            <a href="../post.html" class="post"></a>
+            <a href="../information.html" class="info"></a>
+        </div>
+        <div class="home">
+            <header><h1 lang="ja-jp">東方chan</h1><p>A touhou image board.</p></header>
+            <section>
+                <a href="a.html" class="current"><span class="category_tag">/a/</span>art</a>
+                <a href="c.html"><span class="category_tag">/c/</span>cute art</a>
+                <a href="l.html"><span class="category_tag">/l/</span>lore</a>
+                <a href="v.html"><span class="category_tag">/v/</span>video games</a>
+                <a href="m.html"><span class="category_tag">/m/</span>memes</a>
+                <a href="h.html"><span class="category_tag">/h/</span><span class="age_tag"></span>hentai</a>
+                <a href="y.html"><span class="category_tag">/y/</span><span class="age_tag"></span>yuri</a>
+            </section>
+        </div>
+        <div class="content">
+            <section><img src="../images/image.png"><a href="">Title<span class="author">Author</span></a></section>
+        </div>
+    </body>
+</html>

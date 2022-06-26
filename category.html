@@ -2,6 +2,7 @@
     <head>
         <title>2huchan</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
         <style>
             /* Variable */
             :root{
@@ -195,6 +196,17 @@
                 text-decoration: none;
                 font-size: 0.5em;
             }
+            /* Small screen version */
+            @media screen and (max-width: 1600px) {
+                .content{
+                    width: calc(75vw - 200px);
+                }
+                .content>section{
+                    display: block;
+                    margin: 0 0 30px 0;
+                    width: 100%;
+                }
+            }
             /* Mobile version */
             @media screen and (max-width: 980px) {
                 .home{
@@ -245,9 +257,7 @@
             </section>
         </div>
         <div class="content">
-            <section><img src="images/1.png"><a href="">SQUALALANOUSOMMES PARTIS AEJNAEIJHQNDQZIEHQEMPIJFQPZQPZRIJQZEMIJ <span class="author">LOGGERS</span></a></section>
-            <section><img src="images/2.png"><a href="">Hentai <span class="author">LOGGERS</span></a></section>
-            <section><img src="images/1.png"><a href="">CUTE character <span class="author">LOGGERS</span></a></section>
+            <section><img src="images/image.png"><a href="">Title<span class="author">Author</span></a></section>
         </div>
     </body>
 </html>
