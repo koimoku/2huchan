@@ -80,11 +80,11 @@ To find your onion address, type:
 
 Your hidden service will be accessible without portforwarding your router.
 
-# FIXES TO PROBLEMS
+# Known issues
 
 `htdocs/captcha/captcha.php` requires writing access to store the captcha image in your protected directory.
 
 To fix this, run: `sudo chmod a+w -R opt/lampp/htdocs`, although this may be insecure.
 
-# WORK IN PROGRESS
+# Work in progress
 mysql database stuff
