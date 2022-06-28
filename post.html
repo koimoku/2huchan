@@ -1,8 +1,7 @@
 <html>
     <head>
-        <title>2huchan - art</title>
+        <title>2huchan</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
         <style>
             /* Variable */
             :root{
@@ -336,14 +335,14 @@
     </head>
     <body>
         <div class="overlay">
-            <a href="../post.html" class="post"></a>
-            <a href="../information.html" class="info"></a>
+            <a href="#" onclick="window.history.back();return false;" class="post"></a>
+            <a href="information.html" class="info"></a>
         </div>
         <div id="home" class="home">
             <header><h1 lang="ja-jp">東方chan</h1><p>A touhou image board.</p></header>
             <section>
                 <a onclick="reduce();" class="reduce_btn"><span class="reduce_tag">⠀</span><span class="category_name">Collaps Menu</span></a>
-                <a href="a.html" class="current"><span class="category_tag">/a/</span><span class="category_name">art</span></a>
+                <a href="a.html"><span class="category_tag">/a/</span><span class="category_name">art</span></a>
                 <a href="c.html"><span class="category_tag">/c/</span><span class="category_name">cute art</span></a>
                 <a href="l.html"><span class="category_tag">/l/</span><span class="category_name">lore</span></a>
                 <a href="v.html"><span class="category_tag">/v/</span><span class="category_name">video games</span></a>
@@ -353,7 +352,25 @@
             </section>
         </div>
         <div id="content" class="content">
-            <section><img src="../images/image.png"><a href="">Title<span class="author">Author</span></a></section>
+            <form class="post-form"  method="GET" action="capcha.php"  target="_self">
+               <label for="cars">Board:</label><br>
+               <select id="cars" required>
+                   <option value="1">/a/ art</option>
+                   <option value="2">/c/ cute art</option>
+                   <option value="3">/l/ lore</option>
+                   <option value="4">/v/ video games</option>
+                   <option value="5">/m/ memes</option>
+                   <option value="6">/h/ hentai</option>
+                   <option value="7">/y/ yuri</option>
+               </select> <br><br>
+               <label for="author">Author:</label><br/>
+               <input type="text" id="author" name="author" placeholder="User" required><br/>
+               <label for="title">Title:</label><br/>
+               <textarea id="title" name="story" placeholder="Beautiful image" rows="5" cols="33"></textarea><br/>
+               <label for="file">File:</label><br/>
+               <input type="file" id="file" name="file" required><br/><br/>
+               <input type="submit" value="Submit"><br/><br/>
+            </form>
         </div>
         <script>
             function reduce(){

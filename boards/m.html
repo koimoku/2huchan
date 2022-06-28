@@ -79,6 +79,11 @@
                 padding: 50px;
                 height: calc(100vh - 100px);
                 width: 25vw;
+                transition: ease-in-out 0.2s;
+            }
+            .home.reduce{
+                width: calc(60px + 3em);
+                transition: ease-in-out 0.2s;
             }
             .home>header{
                 height: 25vh;
@@ -87,14 +92,31 @@
                 background-position: left+30px bottom;
                 background-size: contain;
                 padding-left: 40%;
+                transition: ease-in-out 0.2s;
+            }
+            .home.reduce>header{
+                width: 100%;
+                background-position: left bottom;
+                padding-left: 0;
+                transition: ease-in-out 0.2s;
             }
             .home>header>h1{
                 font-size: 4em;
                 margin: 0;
+                transition: ease-in-out 0.2s;
+            }
+            .home.reduce>header>h1{
+                font-size: 3em;
+                transition: ease-in-out 0.2s;
             }
             .home>header>p{
                 font-size: 1.5em;
                 margin: 0;
+                transition: ease-in-out 0.2s;
+            }
+            .home.reduce>header>p{
+                display: none;
+                transition: ease-in-out 0.2s;
             }
             .home>section{
                 height: calc(100vh - 100px - 25vh);
@@ -105,15 +127,23 @@
                 margin: 0;
                 overflow-x: hidden;
                 overflow-y: scroll;
+                transition: ease-in-out 0.2s;
             }
             .home>section>a{
                 color: var(--primary-text-color);
-                padding: 30px;
-                width: calc(25vw - 70px);
+                padding: 15px ;
+                width: calc(25vw - 40px);
                 display: block;
                 border-radius: 30px;
                 overflow: hidden;
                 text-decoration: none;
+            }
+            .home.reduce>section>a{
+                width: calc((60px + 3em) - 37px);
+                transition: ease-in-out 0.2s;
+            }
+            .home.reduce>section>a>.category_name{
+                display: none;
             }
             .home>section>a.current{
                 color: var(--second-text-color);
@@ -121,13 +151,27 @@
             }
             .home>section>a:hover{
                 color: var(--second-text-color);
-                background: var(--second-background);
+                background: #EEEEEE;
             }
-            .category_tag{
+            .reduce_tag{
+                display: inline-block;
                 text-align: center;
                 min-width: 3em;
-                margin-right: 15px;
-                padding: 15px;
+                margin-right: 10px;
+                padding: 15px 10px;
+                color: var(--primary-text-color);
+                background: var(--tag-color);
+                background-image: url(../assets/home_logo.svg);
+                background-position: center -15px;
+                background-size: 100%;
+                border-radius: 30px;
+            }
+            .category_tag{
+                display: inline-block;
+                text-align: center;
+                min-width: 3em;
+                margin-right: 10px;
+                padding: 15px 10px;
                 color: var(--primary-text-color);
                 background: var(--tag-color);
                 border-radius: 30px;
@@ -136,13 +180,17 @@
                 content: "+18";
             }
             .age_tag{
+                display: inline-block;
                 text-align: center;
                 min-width: 3em;
-                margin-right: 15px;
-                padding: 15px;
+                margin-right: 10px;
+                padding: 15px 10px;
                 color: var(--primary-text-color);
                 background: var(--tag-color);
                 border-radius: 30px;
+            }
+            .home.reduce>section>a>.age_tag{
+                display: none;
             }
             .home>section>a:hover>.age_tag{
                 background: var(--age-tag-color);
@@ -155,6 +203,12 @@
                 padding: 50px 50px 0 50px;
                 margin-left: calc(25vw + 50px);
                 width: calc(75vw - 150px);
+                transition: ease-in-out 0.2s;
+            }
+            .content.reduce{
+                margin-left: calc((60px + 3em) + 50px);
+                width: calc((100vw - (60px + 3em)) - 150px);
+                transition: ease-in-out 0.2s;
             }
             .content>section{
                 display: inline-block;
@@ -166,6 +220,11 @@
                 background: var(--second-background);
                 min-width: 25vw;
                 width: calc(100% / 2 - 100px);
+                transition: ease-in-out 0.2s;
+            }
+            .content.reduce>section{
+                width: calc(100% / 3 - 100px);
+                transition: ease-in-out 0.2s;
             }
             .content>section:last-child{
                 margin: 0 30px 50px 0;
@@ -201,10 +260,20 @@
                 .content{
                     width: calc(75vw - 200px);
                 }
+                .content.reduce{
+                    width: calc((100vw - (60px + 3em)) - 200px);
+                }
                 .content>section{
                     display: block;
                     margin: 0 0 30px 0;
                     width: 100%;
+                    transition: ease-in-out 0.2s;
+                }
+                .content.reduce>section{
+                    display: block;
+                    margin: 0 0 30px 0;
+                    width: 100%;
+                    transition: ease-in-out 0.2s;
                 }
             }
             /* Mobile version */
@@ -215,20 +284,46 @@
                     height: calc(100vh - 100px);
                     width: calc(100vw - 100px);
                 }
+                .home.reduce{
+                    text-align: left;
+                    position: relative;
+                    padding: 50px;
+                    height: calc(100vh - 100px);
+                    width: calc(100vw - 100px);
+                }
+                .home>section>a.reduce_btn{
+                    display: none;
+                }
                 .home>section>a{
-                    padding: 30px;
-                    width: calc(100vw - 170px);
-                    display: block;
-                    border-radius: 30px;
-                    overflow: hidden;
-                    text-decoration: none;
+                    width: calc(100vw - 140px);
+                }
+                .home.reduce>section>a{
+                    width: calc(100vw - 140px);
+                }
+                .home.reduce>section>a>.category_name{
+                    display: inline-block;
+                    transition: ease-in-out 0.2s;
+                }
+                .home.reduce>section>a>.age_tag{
+                    display: inline-block;
+                    transition: ease-in-out 0.2s;
                 }
                 .content{
                     padding: 50px;
                     margin-left: 0;
                     width: calc(100vw - 150px);
                 }
+                .content.reduce{
+                    padding: 50px;
+                    margin-left: 0;
+                    width: calc(100vw - 150px);
+                }
                 .content>section{
+                    display: block;
+                    margin: 0 0 30px 0;
+                    width: 100%;
+                }
+                .content.reduce>section{
                     display: block;
                     margin: 0 0 30px 0;
                     width: 100%;
@@ -244,20 +339,34 @@
             <a href="../post.html" class="post"></a>
             <a href="../information.html" class="info"></a>
         </div>
-        <div class="home">
+        <div id="home" class="home">
             <header><h1 lang="ja-jp">東方chan</h1><p>A touhou image board.</p></header>
             <section>
-                <a href="a.html"><span class="category_tag">/a/</span>art</a>
-                <a href="c.html"><span class="category_tag">/c/</span>cute art</a>
-                <a href="l.html"><span class="category_tag">/l/</span>lore</a>
-                <a href="v.html"><span class="category_tag">/v/</span>video games</a>
-                <a href="m.html" class="current"><span class="category_tag">/m/</span>memes</a>
-                <a href="h.html"><span class="category_tag">/h/</span><span class="age_tag"></span>hentai</a>
-                <a href="y.html"><span class="category_tag">/y/</span><span class="age_tag"></span>yuri</a>
+                <a onclick="reduce();" class="reduce_btn"><span class="reduce_tag">⠀</span><span class="category_name">Collaps Menu</span></a>
+                <a href="a.html"><span class="category_tag">/a/</span><span class="category_name">art</span></a>
+                <a href="c.html"><span class="category_tag">/c/</span><span class="category_name">cute art</span></a>
+                <a href="l.html"><span class="category_tag">/l/</span><span class="category_name">lore</span></a>
+                <a href="v.html"><span class="category_tag">/v/</span><span class="category_name">video games</span></a>
+                <a href="m.html" class="current"><span class="category_tag">/m/</span><span class="category_name">memes</span></a>
+                <a href="h.html"><span class="category_tag">/h/</span><span class="age_tag"></span><span class="category_name">hentai</span></a>
+                <a href="y.html"><span class="category_tag">/y/</span><span class="age_tag"></span><span class="category_name">yuri</span></a>
             </section>
         </div>
-        <div class="content">
+        <div id="content" class="content">
             <section><img src="../images/image.png"><a href="">Title<span class="author">Author</span></a></section>
         </div>
+        <script>
+            function reduce(){
+                var elements_home = document.getElementById('home');
+                var elements_content = document.getElementById('content');
+                if (elements_home.classList.contains('reduce') == false){
+                    elements_home.classList.add("reduce");
+                    elements_content.classList.add("reduce");
+                } else {
+                    elements_home.classList.remove("reduce");
+                    elements_content.classList.remove("reduce"); 
+                }
+            }
+        </script>
     </body>
 </html>

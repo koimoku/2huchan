@@ -1,5 +1,5 @@
 # 2huchan
-a simple touhou imageboard created in html, css, and php, meant to run on tor
+a simple touhou imageboard created in html, css, js, and php, meant to run on tor
 
 # Prerequisites:
 a unix-based operating system
